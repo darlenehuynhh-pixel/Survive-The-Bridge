@@ -102,7 +102,7 @@ h1 {
     background-color: #2d5a1b;
     border-radius: 8px 0 0 0;
 }
-
+/* Bridge styling */
 #bridge {
     position: absolute;
     left:0px;
@@ -118,7 +118,6 @@ h1 {
 #car {
     position: absolute;
     bottom: 410px;
-    bottom: 148px;
     left: 0px;
     width: 120px;
     height:auto;
