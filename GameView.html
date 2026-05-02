@@ -8,9 +8,11 @@
         <script src="index.js"></script>    
     </head>
     <body>
-        <h1>Survive the bridge</h1>
-        <div id="time-left"></div>
-        <div id="lights"></div>
+        <div id="setup">
+            <h1>Survive the bridge</h1>
+            <div id="time-left">00:00</div>
+            <div id="lights"></div>
+        </div>
         <img id="car" src="assets/car.gif" alt="car">        
         <div id="cliff-right"></div>
         <div id="bridge"></div>
@@ -19,20 +21,6 @@
 
         <div class="pedal-container">
             <div class="pedal-wrap">
-                <span class="pedal-hint">↑ Arrow</span>
-                <button id="pedal-gas" class="pedal gas">
-                    <div class="pedal-shine"></div>
-                    <div class="pedal-ridges">
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <label>Gas</label>
-                </button>
-                <div class="pedal-base"></div>
-                <span class="pedal-label">Advance</span>
-            </div>
-
-            <div class="pedal-wrap">
-                <span class="pedal-hint">↓ Arrow</span>
                 <button id="pedal-brake" class="pedal brake">
                     <div class="pedal-shine"></div>
                     <div class="pedal-ridges">
@@ -41,7 +29,16 @@
                     <label>Brake</label>
                 </button>
                 <div class="pedal-base brake-base"></div>
-                <span class="pedal-label">Break</span>
+            </div>
+            <div class="pedal-wrap">
+                <button id="pedal-gas" class="pedal gas">
+                    <div class="pedal-shine"></div>
+                    <div class="pedal-ridges">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <label>Gas</label>
+                </button>
+                <div class="pedal-base"></div>
             </div>
         </div>
     </body>
