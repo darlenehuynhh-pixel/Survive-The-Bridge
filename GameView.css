@@ -1,3 +1,4 @@
+
 /* Style for title */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -43,6 +44,35 @@ h1 {
     background: none;
     padding: 0;
 }
+#lights {
+    position: absolute;
+    top: 70px;
+    left: 47%;
+    right: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: #222;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+}
+
+#light-red {
+    background: #ff0000;
+}
+
+#light-green {
+    background: #333;
+}
 #water {
     position: absolute;
     bottom: 0;
@@ -74,10 +104,10 @@ h1 {
 
 #bridge {
     position: absolute;
-    left: 160px;
-    right: 160px;
-    bottom: 130px;
+    left:0px;
+    bottom: 410px;
     height: 18px;
+    width:100%;
     background-color: #8B7355;
     border-top: 4px solid #a08060;
 }
@@ -86,11 +116,13 @@ h1 {
 
 #car {
     position: absolute;
+    bottom: 410px;
     bottom: 148px;
     left: 0px;
     width: 120px;
     height:auto;
     z-index: 3;
+    transition: left 0.9s linear;
     transition: left 0.9s linear;/*This makes the movement more smooth */
 }
 /*cliff style*/
@@ -101,8 +133,16 @@ h1 {
     height: 280px;
     background-color: #2d5a1b;
 }
-#cliff-left { left: 0; border-radius: 0 8px 0 0; }
-#cliff-right { right: 0; border-radius: 8px 0 0 0; }
+#cliff-left { 
+    left: 0; 
+    border-radius: 0 8px 0 0;
+ }
+#cliff-right { 
+    right: 0; 
+    border-radius: 8px 0 0 0;
+ }
+
+ /* used AI to make the pedals */
 /* All the style for pedals */
 .pedal-container {
     position: fixed;
