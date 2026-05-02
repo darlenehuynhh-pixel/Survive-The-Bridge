@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let car_status="stopped";
     let x = 20;
     const timer = document.getElementById("time-left");
-    let timeLeft= 120;
+    let timeLeft= 30;
     let timerIntervalId=null;
 
 
