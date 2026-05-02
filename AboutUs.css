@@ -1,0 +1,91 @@
+*{
+    color:white;
+}
+
+body{
+    background-color:rgb(13, 13, 78);
+    width: 100vw;
+    min-height:100vh;
+    margin:0;
+    padding-top:90px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+nav{
+    background-color: rgb(28, 28, 99);
+    color:white;
+    /*border: white 2px solid;*/
+    top:0;
+    left:0;
+    position:fixed;
+}
+
+nav ul {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    width:100vw;
+}
+
+nav ul li{
+    font-size: 20px;
+}
+
+title, script{
+    visibility:hidden;
+}
+
+h1 {
+    display:flex;
+    justify-content:'center';
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 50px;
+    color: #f0e040;
+    text-shadow: 2px 2px 0px #7a7000;
+    margin:0;
+    padding:0;
+    
+}
+
+h2{
+    display:flex;
+    justify-content: center;
+}
+
+li p, li h3,li{
+    color:black;
+}
+
+li{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+}
+
+#cards{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    list-style: none;
+    padding:0;
+    justify-content:center;
+}
+
+/*display the cards next to each other with a white background*/
+.card{
+    background:white;
+    border-radius: 15px;
+    width:250px;
+    text-align:center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0,0.08);
+    transition:transform 0.2s ease;
+}
+/*moves the card upwards when hovered*/
+.card:hover{
+    cursor:pointer;
+    transform:translateY(-6px);
+}
