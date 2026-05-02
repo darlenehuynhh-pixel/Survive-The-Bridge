@@ -3,14 +3,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const accelerate_button= document.getElementById("pedal-gas");
     const stop_button= document.getElementById("pedal-brake"); 
     let intervalId=null;
+    let car_status="stopped";
 
-    accelerate_button.addEventListener("click",()=>{
-        if(intervalId==null){
-            intervalId=setInterval(goForward, 500);
+    document.addEventListener('keydown',(e) => {
+        if(car_status==="stopped"){
+            if (e.key === 'ArrowUp') { // 's' is the key
+                forwardLoop();
+            }
+        }
+    });
+    
+    accelerate_button.addEventListener("click",forwardLoop);
+
+    
+    stop_button.addEventListener("click",stop);
+
+    document.addEventListener('keydown',(e) => {
+        if(car_status==="moving"){
+            if (e.key === 'ArrowDown') { // 's' is the key
+                stop();
+            }
         }
     });
 
-    stop_button.addEventListener("click",stop);
+    function forwardLoop(){
+        if(intervalId==null){
+            intervalId=setInterval(goForward, 500);
+        }
+    }
+
 
     let x = 0;
 
@@ -22,13 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
             stop();
         }
         car_div.style.left= x+"px";
-        console.log(x);
+        car_status="moving"
     }
 
     function stop(){
         clearInterval(intervalId);
         intervalId=null;
-        console.log("stopped");
+        car_status="stopped";
+    }
+
+    function checkStatus(){
+        
     }
 });
 
