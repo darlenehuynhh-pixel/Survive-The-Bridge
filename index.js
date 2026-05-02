@@ -63,6 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         x+=20;
+        if (x >= FINISH_LINE) {
+            x = FINISH_LINE; // snap to line
+            car_div.style.left = x + "px";
+
+            triggerWin();
+            return; 
+        }
+    
         /*if the car goes off the screeen on the left it resets on the right*/ 
         if (x > window.innerWidth) {
             x = 0; // reset to the left
@@ -196,8 +204,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(msg);
     }
     function triggerWin() {
+        if (gameOver) return;
+
         gameOver = true;
-        stop();
+
+        // 🚫 STOP movement immediately FIRST
+        clearInterval(intervalId);
+        intervalId = null;
+
+        clearInterval(timerIntervalId);
+        timerIntervalId = null;
+        clearTimeout(lightTimeoutId);
+
+        car_status = "stopped";
+
         showMessage('YOU WIN! 🎉', '#2ecc71');
     }
 });
