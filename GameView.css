@@ -82,10 +82,10 @@ h1 {
 
 #bridge {
     position: absolute;
-    left: 160px;
-    right: 160px;
-    bottom: 130px;
+    left:0px;
+    bottom: 410px;
     height: 18px;
+    width:100%;
     background-color: #8B7355;
     border-top: 4px solid #a08060;
 }
@@ -94,7 +94,7 @@ h1 {
 
 #car {
     position: absolute;
-    bottom: 148px;
+    bottom: 410px;
     left: 160px;
     width: 120px;
     height:auto;
@@ -108,8 +108,14 @@ h1 {
     height: 280px;
     background-color: #2d5a1b;
 }
-#cliff-left { left: 0; border-radius: 0 8px 0 0; }
-#cliff-right { right: 0; border-radius: 8px 0 0 0; }
+#cliff-left { 
+    left: 0; 
+    border-radius: 0 8px 0 0;
+ }
+#cliff-right { 
+    right: 0; 
+    border-radius: 8px 0 0 0;
+ }
 /* All the style for pedals */
 .pedal-container {
     position: fixed;
