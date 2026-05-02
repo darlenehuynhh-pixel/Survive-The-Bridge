@@ -1,3 +1,11 @@
+#car{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:0px;
+    transition: left 0.9s linear;
+     border: 2px solid blue;
+}
 /* Style for title */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
