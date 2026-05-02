@@ -13,7 +13,7 @@ body {
     width: 100vw;
     position: relative;
 }
-
+/*header*/
 h1 {
     font-family: 'Bebas Neue', Impact, sans-serif;
     font-size: 1.8rem;
@@ -26,7 +26,7 @@ h1 {
     transform: translateX(-50%);
     white-space: nowrap;
 }
-
+/*chronometer*/
 #time-left {
     position: fixed;
     top: 45px;
@@ -41,6 +41,7 @@ h1 {
     background: none;
     padding: 0;
 }
+/*light style*/
 #lights {
     position: absolute;
     top: 70px;
@@ -63,6 +64,7 @@ h1 {
     background: #139429;
 }
 
+/*Water style*/
 #finish-line{
   position: absolute;
     right: 0px;
@@ -73,6 +75,7 @@ h1 {
         repeating-conic-gradient(#000 0% 25%, #fff 0% 50%);
     background-size: 20px 20px;
 }
+/*style for water*/
 #water {
     position: absolute;
     bottom: 0;
@@ -82,24 +85,14 @@ h1 {
     background-color: #4d7fcb;
 }
 
-#cliff-left {
+#splash{
     position: absolute;
-    left: 0;
     bottom: 130px;
-    width: 160px;
-    height: 180px;
-    background-color: #2d5a1b;
-    border-radius: 0 8px 0 0;
-}
-
-#cliff-right {
-    position: absolute;
-    right: 0;
-    bottom: 130px;
-    width: 160px;
-    height: 180px;
-    background-color: #2d5a1b;
-    border-radius: 8px 0 0 0;
+    width:80px;
+    height:60px;
+    background: radial-gradient(ellipse, #7ab8f5 0%, transparent 70%);
+    display:none;
+    animation: splash-anim 0.8s ease-out forwards;
 }
 /* Bridge styling */
 #bridge {
@@ -110,6 +103,17 @@ h1 {
     width:100%;
     background-color: #8B7355;
     border-top: 4px solid #a08060;
+}
+
+#bridge-left, #bridge-right{
+  position: absolute;
+    left:0px;
+    bottom: 410px;
+    height: 18px;
+    width:100%;
+    background-color: #8B7355;
+    border-top: 4px solid #a08060;
+    display:none;
 }
 
 /* car styling */
@@ -124,6 +128,7 @@ h1 {
     transition: left 0.9s linear;/*This makes the movement more smooth */
 }
 /*cliff style*/
+
 #cliff-left, #cliff-right {
     position: absolute;
     bottom: 130px;
@@ -231,4 +236,27 @@ h1 {
 .pedal.brake:active {
   transform: translateY(8px);
   box-shadow: 0 2px 0 #4a0f09, 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* =====ANIMATIONS===== */
+
+@keyframes splash-anim { 
+  0% { transform: scaleY(0); opacity:1;}
+  50%  { transform: scaleY(1.4); opacity: 1; }
+  100% { transform: scaleY(0.2); opacity: 0; }
+}
+
+@keyframes fall{ 
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(300px) rotate(25deg); opacity: 0; }
+}
+
+@keyframes bridge-fall-left {
+    0%   { transform: rotate(0deg); transform-origin: left; }
+    100% { transform: rotate(30deg); transform-origin: left; opacity: 0; }
+}
+
+@keyframes bridge-fall-right {
+    0%   { transform: rotate(0deg); transform-origin: right; }
+    100% { transform: rotate(-30deg); transform-origin: right; opacity: 0; }
 }
