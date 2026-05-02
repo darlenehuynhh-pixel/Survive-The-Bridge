@@ -72,6 +72,10 @@ button:hover{
     cursor:pointer;
 }
 
+#gameStart a{
+    color:black;
+}
+
 a{
     text-decoration:none;
     color:white;
