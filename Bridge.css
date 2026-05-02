@@ -1,0 +1,8 @@
+#car{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:0px;
+    transition: left 0.9s linear;
+     border: 2px solid blue;
+}
