@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const car_div = document.getElementById("car"); 
-    const accelerate_button= document.getElementById("gas");
-    const stop_button= document.getElementById("break"); 
+    const accelerate_button= document.getElementById("pedal-gas");
+    const stop_button= document.getElementById("pedal-brake"); 
     let intervalId=null;
     accelerate_button.addEventListener("click",()=>{
         if(intervalId==null){

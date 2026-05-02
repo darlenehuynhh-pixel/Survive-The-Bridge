@@ -6,3 +6,148 @@
     transition: left 0.9s linear;
      border: 2px solid blue;
 }
+/* Style for title */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h1 {
+    display:flex;
+    justify-content:'center';
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.12em;
+    color: #f0e040;
+    text-shadow: 2px 2px 0px #7a7000;
+    margin: 0;
+    padding: 0.6rem 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* car styling */
+#car {
+    height: 100px;
+    margin:10px;
+    width: auto;
+    top: 80px;
+    left:0px;
+}
+/*cliff style*/
+.cliff-{
+  width: 100%;
+  height: 300px;
+  background: 
+    /* Grass Top */
+    linear-gradient(to bottom, #4caf50 0%, #4caf50 20px, transparent 20px),
+    /* Cliff Face */
+    linear-gradient(135deg, #8d6e63 25%, #6d4c41 50%, #5d4037 100%);
+  clip-path: polygon(0 20px, 10% 30px, 20% 20px, 30% 40px, 40% 20px, 50% 30px, 60% 10px, 70% 30px, 80% 20px, 90% 40px, 100% 20px, 100% 100%, 0% 100%);
+}
+/* All the style for pedals */
+.pedal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 2rem 0 1rem;
+}
+
+.pedal-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pedal-hint {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.pedal-label {
+  font-size: 10px;
+  color: #666;
+}
+
+.pedal {
+  width: 110px;
+  border: none;
+  border-radius: 6px 6px 12px 12px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.pedal.gas {
+  height: 90px;
+  background: linear-gradient(175deg, #2ecc71 0%, #1a9950 60%, #145f32 100%);
+  box-shadow: 0 10px 0 #0d3d1e, 0 12px 24px rgba(0,0,0,0.5);
+  padding-bottom: 14px;
+}
+
+.pedal.brake {
+  height: 75px;
+  background: linear-gradient(175deg, #e74c3c 0%, #c0392b 60%, #7d1a13 100%);
+  box-shadow: 0 10px 0 #4a0f09, 0 12px 24px rgba(0,0,0,0.5);
+  padding-bottom: 12px;
+}
+
+.pedal-shine {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px 6px 0 0;
+}
+
+.pedal-ridges {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.pedal-ridges span {
+  width: 4px;
+  height: 26px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 2px;
+  display: block;
+}
+
+.pedal label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.pedal.gas label  { color: #0d3d1e; }
+.pedal.brake label { color: #4a0f09; }
+
+.pedal-base {
+  width: 90px;
+  height: 14px;
+  background: #0a2a14;
+  border-radius: 0 0 8px 8px;
+  margin-top: -1px;
+}
+
+.pedal-base.brake-base { background: #350a07; }
+
+/* Pressed state */
+.pedal.gas:active {
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 #0d3d1e, 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.pedal.brake:active {
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 #4a0f09, 0 4px 10px rgba(0,0,0,0.4);
+}
