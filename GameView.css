@@ -1,0 +1,235 @@
+
+/* Style for title */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* { 
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+    background-color: #545474;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.12em;
+    color: #f0e040;
+    text-shadow: 2px 2px 0px #7a7000;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    white-space: nowrap;
+}
+
+#time-left {
+    position: fixed;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 10;
+    width: auto;
+    background: none;
+    padding: 0;
+}
+#lights {
+    position: absolute;
+    top: 70px;
+    left: 47%;
+    right: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: #222;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+}
+
+#light-red {
+    background: #ff0000;
+}
+
+#light-green {
+    background: #333;
+}
+#water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+    background-color: #4d7fcb;
+}
+
+#cliff-left {
+    position: absolute;
+    left: 0;
+    bottom: 130px;
+    width: 160px;
+    height: 180px;
+    background-color: #2d5a1b;
+    border-radius: 0 8px 0 0;
+}
+
+#cliff-right {
+    position: absolute;
+    right: 0;
+    bottom: 130px;
+    width: 160px;
+    height: 180px;
+    background-color: #2d5a1b;
+    border-radius: 8px 0 0 0;
+}
+
+#bridge {
+    position: absolute;
+    left:0px;
+    bottom: 410px;
+    height: 18px;
+    width:100%;
+    background-color: #8B7355;
+    border-top: 4px solid #a08060;
+}
+
+/* car styling */
+
+#car {
+    position: absolute;
+    bottom: 410px;
+    left: 0px;
+    width: 120px;
+    height:auto;
+    z-index: 3;
+    transition: left 0.9s linear;
+}
+/*cliff style*/
+#cliff-left, #cliff-right {
+    position: absolute;
+    bottom: 130px;
+    width: 160px;
+    height: 280px;
+    background-color: #2d5a1b;
+}
+#cliff-left { 
+    left: 0; 
+    border-radius: 0 8px 0 0;
+ }
+#cliff-right { 
+    right: 0; 
+    border-radius: 8px 0 0 0;
+ }
+
+ /* used AI to make the pedals */
+/* All the style for pedals */
+.pedal-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.pedal {
+  width: 110px;
+  border: none;
+  border-radius: 6px 6px 12px 12px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.pedal.gas {
+  height: 90px;
+  background: linear-gradient(175deg, #2ecc71 0%, #1a9950 60%, #145f32 100%);
+  box-shadow: 0 10px 0 #0d3d1e, 0 12px 24px rgba(0,0,0,0.5);
+  padding-bottom: 14px;
+}
+
+.pedal.brake {
+  height: 75px;
+  background: linear-gradient(175deg, #e74c3c 0%, #c0392b 60%, #7d1a13 100%);
+  box-shadow: 0 10px 0 #4a0f09, 0 12px 24px rgba(0,0,0,0.5);
+  padding-bottom: 12px;
+}
+
+.pedal-shine {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px 6px 0 0;
+}
+
+.pedal-ridges {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.pedal-ridges span {
+  width: 4px;
+  height: 26px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 2px;
+  display: block;
+}
+
+.pedal label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.pedal.gas label  { color: #0d3d1e; }
+.pedal.brake label { color: #4a0f09; }
+
+.pedal-base {
+  width: 90px;
+  height: 14px;
+  background: #0a2a14;
+  border-radius: 0 0 8px 8px;
+  margin-top: -1px;
+}
+
+.pedal-base.brake-base { background: #350a07; }
+
+/* Pressed state */
+.pedal.gas:active {
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 #0d3d1e, 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.pedal.brake:active {
+  transform: translateY(8px);
+  box-shadow: 0 2px 0 #4a0f09, 0 4px 10px rgba(0,0,0,0.4);
+}

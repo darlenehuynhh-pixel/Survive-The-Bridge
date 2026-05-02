@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survive the bridge</title>
+        <link rel="stylesheet" href="GameView.css">
+        <script src="index.js"></script>    
+    </head>
+    <body>
+        <div id="setup">
+            <h1>Survive the bridge</h1>
+            <div id="time-left">00:00</div>
+            <div id="lights">
+                <div id="red-light"></div>
+                <div id="green-light"></div>
+            </div>
+        </div>
+        <img id="car" src="assets/car.gif" alt="car">        
+        <div id="cliff-right"></div>
+        <div id="bridge"></div>
+        <div id="cliff-left"></div>
+        <div id="water"></div>
+
+        <div class="pedal-container">
+            <div class="pedal-wrap">
+                <button id="pedal-brake" class="pedal brake">
+                    <div class="pedal-shine"></div>
+                    <div class="pedal-ridges">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <label>Brake</label>
+                </button>
+                <div class="pedal-base brake-base"></div>
+            </div>
+            <div class="pedal-wrap">
+                <button id="pedal-gas" class="pedal gas">
+                    <div class="pedal-shine"></div>
+                    <div class="pedal-ridges">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <label>Gas</label>
+                </button>
+                <div class="pedal-base"></div>
+            </div>
+        </div>
+    </body>
+</html>
