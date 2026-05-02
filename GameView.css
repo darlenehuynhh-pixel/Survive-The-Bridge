@@ -1,11 +1,4 @@
-#car{
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    left:0px;
-    transition: left 0.9s linear;
-     border: 2px solid blue;
-}
+
 /* Style for title */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -51,6 +44,35 @@ h1 {
     background: none;
     padding: 0;
 }
+#lights {
+    position: absolute;
+    top: 70px;
+    left: 47%;
+    right: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: #222;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+}
+
+#light-red {
+    background: #ff0000;
+}
+
+#light-green {
+    background: #333;
+}
 #water {
     position: absolute;
     bottom: 0;
@@ -95,10 +117,11 @@ h1 {
 #car {
     position: absolute;
     bottom: 410px;
-    left: 160px;
+    left: 0px;
     width: 120px;
     height:auto;
     z-index: 3;
+    transition: left 0.9s linear;
 }
 /*cliff style*/
 #cliff-left, #cliff-right {
@@ -116,6 +139,8 @@ h1 {
     right: 0; 
     border-radius: 8px 0 0 0;
  }
+
+ /* used AI to make the pedals */
 /* All the style for pedals */
 .pedal-container {
     position: fixed;
@@ -127,11 +152,6 @@ h1 {
     align-items: flex-end;
     z-index: 10;
 }
-
-
-
-
-
 
 .pedal {
   width: 110px;
