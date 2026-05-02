@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     /**
-     * This is the variables used 
+     * These are the variables used 
      */
     const car_div = document.getElementById("car"); 
     const accelerate_button= document.getElementById("pedal-gas");
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timeLeft= 30;
     let timerIntervalId=null;
 
-
+    // These are all the event listeners 
     document.addEventListener('keydown',(e) => {
         if(car_status==="stopped"){
             if (e.key === 'ArrowUp') { // 's' is the key
@@ -20,8 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    // adds a event Listener when the gas button is clicked the car goes forward
     accelerate_button.addEventListener('click',forwardLoop);
+    // adds a event Listener when the brake button is clicked the car stops at it spot 
     stop_button.addEventListener('click',stop);
+    // this is a event listner 
     document.addEventListener('keydown',(e) => {
         if(car_status==="moving"){
             if (e.key === 'ArrowDown') { // 's' is the key
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
+    //This function makes the car go  forwars of 50px 
     function goForward(){
         x+=50;
         /*if the car goes off the screeen on the left it resets on the right*/ 
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         car_status="moving"
         
     }
-
+    // This function makes the car stop at the position it is at by stopping the interval.
     function stop(){
         clearInterval(intervalId);
         intervalId=null;
@@ -75,8 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add leading zeros if needed
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     }
-
-    
 });
 
 
