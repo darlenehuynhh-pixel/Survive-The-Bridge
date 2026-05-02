@@ -35,12 +35,29 @@ nav ul li{
     list-style:none;
 }
 
-button:hover{
+ #signIn{
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    border:white;
+    width:100px;
+    height:50px;
+    border-radius: 20px ;
+    font-size:20px ;
+    color:black;
+    margin-top:20px;
+}
+
+#signIn:hover{
     opacity:0.85;
     transform: translateY(-3px);
     cursor:pointer;
 }
 
+#signUp{
+    margin:15px;
+    border:none;
+    background: none;
+    color:white;
+}
 a{
     text-decoration:none;
     color:white;
@@ -78,14 +95,6 @@ form input{
 
 }
 
-button{
-    font-family: 'Bebas Neue', Impact, sans-serif;
-    border:white;
-    width:100px;
-    height:50px;
-    border-radius: 20px ;
-    font-size:20px ;
+input{
     color:black;
-    margin-top:20px;
-    
 }

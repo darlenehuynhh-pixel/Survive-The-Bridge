@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survive The Bridge</title>
+        <link rel="stylesheet" href="../static/SignIn.css">
+        <script defer src="../static/SignIn.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home</a>
+                </li>
+                <li> 
+                    <a href="AboutUs.html">About-Us</a>
+                </li>
+                <li> 
+                    <a href="SignIn.html">Sign-in</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Sign In</h1>
+        <form method="POST">
+            <input type="Text" name="username" id="username" required minlength="3" placeholder="Username"/>
+            <input type="password" name="password" id="password" required minlength="8" placeholder="Password"/>
+            <input type="password" name="confirmation" id="confirmation" required placeholder="confirmation" hidden/>
+            <button id="signIn" type="submit">Login</button>  
+            <button id="signUp" type="button">Sign Up</button>
+        </form>
+        
+    </body>
+    <footer>
+        <p>Presented by 404 name not found</p>
+    </footer>
+</html>
