@@ -3,18 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
-        <!-- Link to your CSS file here -->
+        <title>Survive the bridge</title>
         <link rel="stylesheet" href="Bridge.css">
-        
     </head>
     <body>
-        <H1>Survive the bridge</H1>
+        <h1>Survive the bridge</h1>
         <div id="time-left"></div>
         <div id="lights"></div>
-        <div id="car"></div>
-        <button id="gas">Advance</button>
-        <button id="break">Break</button>
+        <img id="car" src="assets/car.gif" alt="car">        
+        <div id="cliff-right"></div>
+        <div id="bridge"></div>
+        <div id="cliff-left"></div>
+        <div id="water"></div>
 
+        <div class="pedal-container">
+            <div class="pedal-wrap">
+                <span class="pedal-hint">↑ Arrow</span>
+                <button id="pedal-gas" class="pedal gas">
+                    <div class="pedal-shine"></div>
+                    <div class="pedal-ridges">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <label>Gas</label>
+                </button>
+                <div class="pedal-base"></div>
+                <span class="pedal-label">Advance</span>
+            </div>
+
+            <div class="pedal-wrap">
+                <span class="pedal-hint">↓ Arrow</span>
+                <button id="pedal-brake" class="pedal brake">
+                    <div class="pedal-shine"></div>
+                    <div class="pedal-ridges">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <label>Brake</label>
+                </button>
+                <div class="pedal-base brake-base"></div>
+                <span class="pedal-label">Break</span>
+            </div>
+        </div>
     </body>
 </html>
