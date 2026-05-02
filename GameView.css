@@ -118,10 +118,12 @@ h1 {
 #car {
     position: absolute;
     bottom: 410px;
+    bottom: 148px;
     left: 0px;
     width: 120px;
     height:auto;
     transition: left 0.9s linear;
+    transition: left 0.9s linear;/*This makes the movement more smooth */
 }
 /*cliff style*/
 #cliff-left, #cliff-right {
